@@ -4,7 +4,7 @@ import "./styles.css";
 export default function Menu() {
   return (
     <>
-      <div className="menu">
+      <section className="menu">
         <ul>
           <li>
             <button>home</button>
@@ -19,7 +19,7 @@ export default function Menu() {
             <button>categorias</button>
           </li>
         </ul>
-      </div>
+      </section>
     </>
   );
 }
