@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 nav,
 .faq,
 .botoes {
@@ -14,8 +19,16 @@ nav,
   color: #fff;
 }
 
-.container > div,
-.container > nav {
-  padding: 0 20px;
+.container > nav,
+.container > section {
+  padding: 0px 20px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .container > nav,
+  .container > section {
+    padding: 10px 20px;
+    margin-bottom: 0px;
+  }
 }
