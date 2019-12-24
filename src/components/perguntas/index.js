@@ -22,30 +22,19 @@ export default function Dashboard() {
     loadResults();
   }, [results]);
 
-  async function handleSearch(e) {
-    e.preventDefault();
-    setSearchTerm(e.target.value);
-    console.log(searchTerm);
-  }
-
   return (
     <>
-      <div className="faq">
+      <section className="faq">
         <div className="flex-container">
           <h1>FAQ - Perguntas Frequentes</h1>
-          <form className="input-group" onSubmit={handleSearch}>
-            <input
-              type="text"
-              placeholder="Busque por termo"
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-            />
+          <form className="input-group">
+            <input type="text" placeholder="Busque por termo" />
             <button>
               <i className="fa fa-search"></i>buscar
             </button>
           </form>
         </div>
-        <table>
+        <table className="table table-responsive">
           <thead>
             <tr>
               <th>Pergunta</th>
@@ -55,6 +44,12 @@ export default function Dashboard() {
               <th>Ordem</th>
               <th>Editar</th>
               <th>Excluir</th>
+            </tr>
+          </thead>
+          <thead className="mobile">
+            <tr>
+              <th>Pergunta</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -73,11 +68,14 @@ export default function Dashboard() {
                 <td>
                   <i className="fa table-icons fa-lg fa-trash"></i>
                 </td>
+                <td className="mobile">
+                  <i className="fa table-icons fa-lg fa-plus-circle"></i>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
+      </section>
     </>
   );
 }
