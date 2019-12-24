@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 15px;
+  height: 100px;
+  background-color: #0168b4;
+  align-items: center;
+}
+
+nav img {
+  height: 60px;
+}
+
+nav .links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 250px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    flex-flow: column wrap;
+    height: auto;
+  }
+
+  img {
+    margin: 20px 0;
+  }
+}
